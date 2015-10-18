@@ -6,7 +6,7 @@ output: html_document
 ---  
 
 ## Loading and preprocessing the data
-* Load neceessary library  
+* Load neceessary library  , i.e plyr,dplyr,ggplot2,lattice
 * Set the working directory
 * Download the file and unzip  
 
@@ -152,8 +152,3 @@ averageStep <- ddply(missingValueData, .(interval, weekdays), summarise, steps=m
 ```{r,echo=TRUE}
 xyplot(steps ~ interval | weekdays, data = averageStep, layout = c(1, 2), type="l", xlab = "Interval", ylab = "Number of steps" , col="red")
 ```
-
-
-
-
-
